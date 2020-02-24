@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+
+body {
+  font-family: 'Odibee Sans', sans-serif;
+  background: #3e5d7c;
+
+}
+
+header {
+  background: #86a6c5;
+  text-align: center;
+  padding: 35px;
+}
+
+section {
+  color: white;
+}
+
+.scoreboard {
+  text-align: center;
+  margin: 25px auto;
+  width: 200px;
+  font-size: 4em;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.scoreboard > span {
+  padding: 0 15px;
+}
+.badge {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+#player-label {
+  position: absolute;
+  left: -30px;
+  top: 40px;
+}
+
+#computer-label {
+  position: absolute;
+  right: -38px;
+  top: 40px;
+}
+
+.results {
+  text-align: center;
+  font-size: 3em;
+}
+
+.choices {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.choice {
+  font-size: 5em;
+  transition: all 0.3s;
+}
+
+.choice:hover {
+  background: white;
+  color: #424040;
+  cursor: pointer;
+}
+
+#action-message {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 25px;
+}
