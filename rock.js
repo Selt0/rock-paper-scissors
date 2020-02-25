@@ -11,20 +11,6 @@ const action_p = document.getElementById('action-message')
 const reset_btn = document.querySelector('button')
 const choices_div = document.getElementById('choices');
 
-
-rock_div.addEventListener('click', function() {
-  game('rock')
-})
-
-paper_div.addEventListener('click', function() {
-  game('paper')
-})
-
-scissors_div.addEventListener('click', function() {
-  game('scissors')
-})
-
-
 //computer selects rock, paper, scissors
 function computerPlay() {
   //pick random number 0 - 2
@@ -66,9 +52,7 @@ function game(playerChoice) {
     playerScore_span.innerHTML = playerScore; 
     result_p.innerHTML = `PLAYER WINS! ${capitalize(playerChoice)} beats ${computerChoice}.`;
     playerChoice_div.classList.add('bg-success');
-    setTimeout(function() {
-      playerChoice_div.classList.remove('bg-success')
-    }, 300);
+    setTimeout(() => playerChoice_div.classList.remove('bg-success'), 300);
   }
 
   //player loses
@@ -77,18 +61,14 @@ function game(playerChoice) {
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `COMPUTER WINS! ${computerChoice} beats ${capitalize(playerChoice)}.`;
     playerChoice_div.classList.add('bg-danger');
-    setTimeout(function() {
-      playerChoice_div.classList.remove('bg-danger')
-    }, 300);
+    setTimeout(() => playerChoice_div.classList.remove('bg-danger'), 300);
   }
 
   //draw
   function draw() {
     result_p.innerHTML = 'DRAW!'
     playerChoice_div.classList.add('bg-secondary');
-    setTimeout(function() {
-      playerChoice_div.classList.remove('bg-secondary')
-    }, 300);
+    setTimeout(() => playerChoice_div.classList.remove('bg-secondary'), 300);
   }
 
   if (playerScore == 5 || computerScore == 5) {
@@ -135,3 +115,20 @@ function game(playerChoice) {
     //reset result message
     result_p.innerHTML = 'Are you feeling lucky? First to 5 wins!'
   })
+
+  
+function main() {
+  rock_div.addEventListener('click', function() {
+    game('rock')
+  })
+  
+  paper_div.addEventListener('click', function() {
+    game('paper')
+  })
+  
+  scissors_div.addEventListener('click', function() {
+    game('scissors')
+  })
+}
+
+main();
