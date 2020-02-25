@@ -27,6 +27,7 @@ section {
 
 .scoreboard > span {
   padding: 0 15px;
+  margin-bottom: 25px;
 }
 .badge {
   font-size: 1rem;
@@ -47,12 +48,16 @@ section {
 
 .results {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3em;
+  min-height: 160px;
 }
 
 .choices {
   text-align: center;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 
 .choice {
@@ -65,9 +70,32 @@ section {
   color: #424040;
   cursor: pointer;
 }
+#action {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
 
 #action-message {
   text-align: center;
   font-size: 3em;
-  margin-top: 25px;
+  margin: 25px auto 4rem auto;
+  max-width: 500px;
+}
+
+#reset {
+  margin: 0 auto 4rem auto;
+  max-width: 250px;
+}
+
+.bg-success,
+.bg-secondary,
+.bg-danger {
+  transition: all 0.3s;
+}
+
+.d-none {
+  transition: all 0.5s ease-out;
 }
