@@ -3,7 +3,10 @@
 body {
   font-family: 'Odibee Sans', sans-serif;
   background: #3e5d7c;
+}
 
+p {
+  margin-bottom: 0;
 }
 
 header {
@@ -18,7 +21,8 @@ section {
 
 .scoreboard {
   text-align: center;
-  margin: 25px auto;
+  margin: 0.7em auto;
+  margin-bottom: 0;
   width: 200px;
   font-size: 4em;
   padding: 10px 20px;
@@ -98,4 +102,55 @@ section {
 
 .d-none {
   transition: all 0.5s ease-out;
+}
+
+@media (max-width: 520px ) {
+  header {
+    padding: 10px;
+  }
+
+  .display-3 {
+    font-size: 2.5rem;
+  }
+
+  .results {
+    font-size: 2em;
+    min-height: 115px;
+  }
+
+  .choice {
+    font-size: 3.3em;
+  }
+
+  .scoreboard {
+    width: 170px;
+    margin-bottom: 25px;
+    font-size: 3em;
+  }
+
+  #action-message {
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+
+  #reset {
+    margin: 4em auto;
+  }
+}
+
+@media (min-height: 800px) {
+  .scoreboard {
+    width: 200px;
+    font-size: 4em;
+  }
+
+  .choice {
+    font-size: 4em;
+    margin: 10px auto;
+  }
+
+  #action-message {
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
 }
